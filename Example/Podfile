@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CHAnimationLabel_Example' do
+  pod 'CHAnimationLabel', :path => '../'
+
+  target 'CHAnimationLabel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
