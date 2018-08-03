@@ -43,7 +43,6 @@ open class CHAnimationLabel: UILabel {
     private var animator: CHAnimationManager?
 
     open func startAnimation(duration: TimeInterval, nextText: String? = nil,_ completion:(() -> Void)?) {
-        alpha = 1
         guard let animator = animator else {
             return
         }

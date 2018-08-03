@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		129E04A6CFAC99B059295E1E0225BAF9 /* CHAnimationLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7FCBCED77D24F1EFE3EC7629D4AC9C /* CHAnimationLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		129E04A6CFAC99B059295E1E0225BAF9 /* CHAnimationLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCF0F5716F91CF7AF3ED95211D1C9CE /* CHAnimationLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6407850BDC273B9D72A73CABC56BB8F0 /* Pods-CHAnimationLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A23FF6237F7DBB63DF0F2F96CE4774 /* Pods-CHAnimationLabel_Example-dummy.m */; };
 		7DD4CA581E4314E239D0B3CF930BAE95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		809401B91CCE60BBA6C0D680E098BC7E /* Pods-CHAnimationLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F067EDA8EFDA8CA23C336350CBBF6AA /* Pods-CHAnimationLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EB5D5DD3B76F98488E3E224ECE8A2C0 /* Pods-CHAnimationLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90410439956B0F7CC1B84C2214A5F67C /* Pods-CHAnimationLabel_Tests-dummy.m */; };
-		B81A9A29B19EF1D006803EF8B04E4F8B /* CHAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C3927AAAED57B5C30C8E654A86DBF /* CHAnimationManager.swift */; };
+		B81A9A29B19EF1D006803EF8B04E4F8B /* CHAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AED19FBA13428F902D51B8FFD6040E /* CHAnimationManager.swift */; };
 		BEE95A41C51DF3BA0917A6C25FABD192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C499F7C4EAD1276FBF912153CD9E06F2 /* Pods-CHAnimationLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 083F5752094C3284FDA170011FDAAC71 /* Pods-CHAnimationLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFAD10F7A8BC21A30F84C8E8D64F7A9D /* CHAnimationLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD802F39CB478A8153C6B1493F129A5 /* CHAnimationLabel-dummy.m */; };
-		E33C63BC56781322F3CDEA4BC42BF569 /* CHAnimationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967CCC59DC0219988298DFAEF3400C66 /* CHAnimationLabel.swift */; };
+		DFAD10F7A8BC21A30F84C8E8D64F7A9D /* CHAnimationLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82977419BF29D3CD6E1CE68B4578655E /* CHAnimationLabel-dummy.m */; };
+		E33C63BC56781322F3CDEA4BC42BF569 /* CHAnimationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BEF7329779C48436EE4C6F33A19E /* CHAnimationLabel.swift */; };
 		FAB8BFDA8D00D43223B6541BB6D124F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,37 +43,34 @@
 		083F5752094C3284FDA170011FDAAC71 /* Pods-CHAnimationLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CHAnimationLabel_Example-umbrella.h"; sourceTree = "<group>"; };
 		19A893F2CDC0AB28B5C6AB306AC40C7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CBBCE5181E18896D0E278B6A58A8BEA /* CHAnimationLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CHAnimationLabel.framework; path = CHAnimationLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AD802F39CB478A8153C6B1493F129A5 /* CHAnimationLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHAnimationLabel-dummy.m"; sourceTree = "<group>"; };
-		4E11437F57995E9C02D06652686CDC7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51824CAC7C07561A17FBB4B9DD5F60F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3B40681ED18D1EA1F005B2271120030E /* CHAnimationLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHAnimationLabel.xcconfig; sourceTree = "<group>"; };
+		45AED19FBA13428F902D51B8FFD6040E /* CHAnimationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHAnimationManager.swift; path = CHAnimationLabel/Classes/CHAnimationManager.swift; sourceTree = "<group>"; };
+		4766A50570B81C9D1446BA1A34B67DD5 /* CHAnimationLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHAnimationLabel-prefix.pch"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A6C3927AAAED57B5C30C8E654A86DBF /* CHAnimationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHAnimationManager.swift; path = CHAnimationLabel/Classes/CHAnimationManager.swift; sourceTree = "<group>"; };
+		5CCF0F5716F91CF7AF3ED95211D1C9CE /* CHAnimationLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHAnimationLabel-umbrella.h"; sourceTree = "<group>"; };
 		7322749629E3D23D534B334B9B8CA866 /* Pods-CHAnimationLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CHAnimationLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CCFFC272CF420114C2B96415035D3B5 /* Pods-CHAnimationLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CHAnimationLabel_Example-resources.sh"; sourceTree = "<group>"; };
-		7E7FCBCED77D24F1EFE3EC7629D4AC9C /* CHAnimationLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHAnimationLabel-umbrella.h"; sourceTree = "<group>"; };
 		7F067EDA8EFDA8CA23C336350CBBF6AA /* Pods-CHAnimationLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CHAnimationLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
-		87146559FBE5AF42F6E2E89A20122566 /* CHAnimationLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CHAnimationLabel.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		82977419BF29D3CD6E1CE68B4578655E /* CHAnimationLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHAnimationLabel-dummy.m"; sourceTree = "<group>"; };
 		8F05B426153C9769AA62C25D81596F4F /* Pods_CHAnimationLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CHAnimationLabel_Tests.framework; path = "Pods-CHAnimationLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90410439956B0F7CC1B84C2214A5F67C /* Pods-CHAnimationLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CHAnimationLabel_Tests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		967CCC59DC0219988298DFAEF3400C66 /* CHAnimationLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHAnimationLabel.swift; path = CHAnimationLabel/Classes/CHAnimationLabel.swift; sourceTree = "<group>"; };
 		98D1EC7D06C4A1453DC5C51E400F7938 /* Pods-CHAnimationLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CHAnimationLabel_Example.modulemap"; sourceTree = "<group>"; };
+		9C2C8CD011EEFF51DFD2FE279D48FFC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE71D72154B2C6362BC55EFEF72605E /* Pods-CHAnimationLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CHAnimationLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B4A23FF6237F7DBB63DF0F2F96CE4774 /* Pods-CHAnimationLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CHAnimationLabel_Example-dummy.m"; sourceTree = "<group>"; };
 		B79AC2958F5C39C419EC210C566685D0 /* Pods-CHAnimationLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CHAnimationLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF7C12E6839028A9FF41659E35154F01 /* CHAnimationLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHAnimationLabel.xcconfig; sourceTree = "<group>"; };
+		BA6B51EC676B5174514DF85FB81A37E2 /* CHAnimationLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHAnimationLabel.modulemap; sourceTree = "<group>"; };
 		BFE4F3C70BE1F21DC94E927A9014F3E0 /* Pods-CHAnimationLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CHAnimationLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C164AD05BD3747B1C39CE87A4F3A6271 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D95B5D5A9ADCCC5C78A41996795ACA /* CHAnimationLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHAnimationLabel.modulemap; sourceTree = "<group>"; };
 		C92F9213513C7373627FE4A3C5B1052A /* Pods-CHAnimationLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CHAnimationLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		CDB1B7E6FFC896871E3E48C2B8A2C967 /* Pods-CHAnimationLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CHAnimationLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D23848D3A6517C01B44E1C38F636BDF3 /* CHAnimationLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHAnimationLabel-prefix.pch"; sourceTree = "<group>"; };
 		D659E4D4C9CAEDB57D3A18467578B9E1 /* Pods-CHAnimationLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CHAnimationLabel_Tests-resources.sh"; sourceTree = "<group>"; };
 		D840EAE21D05195462F6605BF25607BC /* Pods-CHAnimationLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CHAnimationLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F1D6CF2F91F6F45588C7590E51F65777 /* Pods-CHAnimationLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CHAnimationLabel_Tests.modulemap"; sourceTree = "<group>"; };
-		F8FA7676702FED1EA4F02D61E42E0EEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F991E26C23B9A6F540576AF332ABBE78 /* Pods_CHAnimationLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CHAnimationLabel_Example.framework; path = "Pods-CHAnimationLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA690ED2539B6092A58E3FFCB09364E7 /* Pods-CHAnimationLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CHAnimationLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FB18BEF7329779C48436EE4C6F33A19E /* CHAnimationLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHAnimationLabel.swift; path = CHAnimationLabel/Classes/CHAnimationLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057286B3F4689BE7E5F1A197E307253A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E1BB28DAFA53EDBD1CF6999D51B9895 /* CHAnimationLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1E1BB28DAFA53EDBD1CF6999D51B9895 /* CHAnimationLabel */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BEF7329779C48436EE4C6F33A19E /* CHAnimationLabel.swift */,
+				45AED19FBA13428F902D51B8FFD6040E /* CHAnimationManager.swift */,
+				AEF687A16DB5FAB58F17BED210986C59 /* Support Files */,
+			);
+			name = CHAnimationLabel;
+			path = CHAnimationLabel;
+			sourceTree = "<group>";
+		};
 		26DC3E02B57BB475983DA098E2A5E0CC /* Pods-CHAnimationLabel_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,20 +148,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5596A7E9A53BB7A8E7990E04C1784697 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7D95B5D5A9ADCCC5C78A41996795ACA /* CHAnimationLabel.modulemap */,
-				BF7C12E6839028A9FF41659E35154F01 /* CHAnimationLabel.xcconfig */,
-				4AD802F39CB478A8153C6B1493F129A5 /* CHAnimationLabel-dummy.m */,
-				D23848D3A6517C01B44E1C38F636BDF3 /* CHAnimationLabel-prefix.pch */,
-				7E7FCBCED77D24F1EFE3EC7629D4AC9C /* CHAnimationLabel-umbrella.h */,
-				4E11437F57995E9C02D06652686CDC7C /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CHAnimationLabel";
-			sourceTree = "<group>";
-		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,23 +160,25 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E96AEF150EE5FB727F1DA13B7EF3162F /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				057286B3F4689BE7E5F1A197E307253A /* Pods */,
 				479B05081CCEB4F6E1EC6A1976B2065F /* Products */,
 				F7AEE571B8A6C2562CFC94928573E584 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A668D017386F1BDAA5BB20509E53D9DE /* CHAnimationLabel */ = {
+		AEF687A16DB5FAB58F17BED210986C59 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				967CCC59DC0219988298DFAEF3400C66 /* CHAnimationLabel.swift */,
-				5A6C3927AAAED57B5C30C8E654A86DBF /* CHAnimationManager.swift */,
-				DF5BA3FAAD53F08BB06C795B9701AAB6 /* Pod */,
-				5596A7E9A53BB7A8E7990E04C1784697 /* Support Files */,
+				BA6B51EC676B5174514DF85FB81A37E2 /* CHAnimationLabel.modulemap */,
+				3B40681ED18D1EA1F005B2271120030E /* CHAnimationLabel.xcconfig */,
+				82977419BF29D3CD6E1CE68B4578655E /* CHAnimationLabel-dummy.m */,
+				4766A50570B81C9D1446BA1A34B67DD5 /* CHAnimationLabel-prefix.pch */,
+				5CCF0F5716F91CF7AF3ED95211D1C9CE /* CHAnimationLabel-umbrella.h */,
+				9C2C8CD011EEFF51DFD2FE279D48FFC0 /* Info.plist */,
 			);
-			name = CHAnimationLabel;
-			path = ../..;
+			name = "Support Files";
+			path = "../Target Support Files/CHAnimationLabel";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -183,16 +187,6 @@
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DF5BA3FAAD53F08BB06C795B9701AAB6 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				87146559FBE5AF42F6E2E89A20122566 /* CHAnimationLabel.podspec */,
-				51824CAC7C07561A17FBB4B9DD5F60F4 /* LICENSE */,
-				F8FA7676702FED1EA4F02D61E42E0EEA /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		E47B6753413EC80014E7E531E51306D7 /* Pods-CHAnimationLabel_Example */ = {
@@ -211,14 +205,6 @@
 			);
 			name = "Pods-CHAnimationLabel_Example";
 			path = "Target Support Files/Pods-CHAnimationLabel_Example";
-			sourceTree = "<group>";
-		};
-		E96AEF150EE5FB727F1DA13B7EF3162F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A668D017386F1BDAA5BB20509E53D9DE /* CHAnimationLabel */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F7AEE571B8A6C2562CFC94928573E584 /* Targets Support Files */ = {
@@ -421,7 +407,7 @@
 		};
 		2731273702C76DA769FA53D307E9C00B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF7C12E6839028A9FF41659E35154F01 /* CHAnimationLabel.xcconfig */;
+			baseConfigurationReference = 3B40681ED18D1EA1F005B2271120030E /* CHAnimationLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -454,7 +440,7 @@
 		};
 		713F21DF5285C2846F29518A1D40EB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF7C12E6839028A9FF41659E35154F01 /* CHAnimationLabel.xcconfig */;
+			baseConfigurationReference = 3B40681ED18D1EA1F005B2271120030E /* CHAnimationLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
