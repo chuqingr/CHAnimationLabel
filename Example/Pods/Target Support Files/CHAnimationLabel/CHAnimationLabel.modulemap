@@ -1,0 +1,6 @@
+framework module CHAnimationLabel {
+  umbrella header "CHAnimationLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}

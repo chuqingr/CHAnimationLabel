@@ -1,0 +1,16 @@
+PODS:
+  - CHAnimationLabel (0.1.0)
+
+DEPENDENCIES:
+  - CHAnimationLabel (from `../`)
+
+EXTERNAL SOURCES:
+  CHAnimationLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CHAnimationLabel: f70408b53edd9e97b22a24d97f83291d020b663d
+
+PODFILE CHECKSUM: df328d370e000cb6789b47ad556a7b836f0d486b
+
+COCOAPODS: 1.5.3
