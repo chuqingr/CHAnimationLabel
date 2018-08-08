@@ -7,23 +7,17 @@
 //
 
 import UIKit
-import CHAnimationLabel
 
 class ViewController: UIViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUI()
+        view.backgroundColor = UIColor.orange.withAlphaComponent(0.3)
     }
 
-    private func initUI() {
-        let label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 199, height: 133))
-        label.text = "哈哈哈哈哈"
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.animationType = .fade
-        label.textColor = .black
-        view.addSubview(label)
-        label.startAnimation(duration: 2, nil)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.present(NextViewController(), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
