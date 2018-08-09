@@ -186,6 +186,10 @@ open class CHAnimationLabel: UILabel {
         animator.startCounterAnimation(completion)
     }
 
+    deinit {
+        debugPrint("\(type(of: self)):deinit")
+    }
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
 

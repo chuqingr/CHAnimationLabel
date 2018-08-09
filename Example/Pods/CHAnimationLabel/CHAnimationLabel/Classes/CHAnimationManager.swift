@@ -46,10 +46,18 @@ class CHAnimationManager: NSObject {
         isAnimating = true
     }
 
+    deinit {
+        displayLink?.invalidate()
+        displayLink = nil
+        debugPrint("\(type(of: self)):deinit")
+    }
+
     func startCounterAnimation(_ completion:(() -> Void)?) {
         guard let label = label else {
             return
         }
+        displayLink?.invalidate()
+        displayLink = nil
         setDisplayLineCounter()
         label.layer.removeAllAnimations()
         if !isAnimating {
@@ -76,6 +84,7 @@ class CHAnimationManager: NSObject {
 
 extension CHAnimationManager {
     private func setDisplayLine() {
+
         displayLink = CADisplayLink(target: self, selector: #selector(update))
         displayLink?.isPaused = true
         displayLink?.add(to: RunLoop.main, forMode: .commonModes)
@@ -160,6 +169,7 @@ extension CHAnimationManager {
         let now = Date.timeIntervalSinceReferenceDate
         label.progress = label.progress + (now - label.lastUpdate)
         label.lastUpdate = now
+
         if label.progress >= label.totalTime {
             displayLink?.invalidate()
             displayLink = nil

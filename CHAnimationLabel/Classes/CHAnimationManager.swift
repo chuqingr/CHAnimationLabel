@@ -46,6 +46,29 @@ class CHAnimationManager: NSObject {
         isAnimating = true
     }
 
+    deinit {
+        displayLink?.invalidate()
+        displayLink = nil
+        debugPrint("\(type(of: self)):deinit")
+    }
+
+    func startCounterAnimation(_ completion:(() -> Void)?) {
+        guard let label = label else {
+            return
+        }
+        displayLink?.invalidate()
+        displayLink = nil
+        setDisplayLineCounter()
+        label.layer.removeAllAnimations()
+        if !isAnimating {
+            self.completion = completion
+            beginTime = CACurrentMediaTime()
+            displayLink?.isPaused = false
+        }
+        isAnimating = true
+    }
+    
+
     // MARK: - Init
     convenience init(animationType: CHAnimationType, duration:TimeInterval) {
         self.init()
@@ -61,7 +84,15 @@ class CHAnimationManager: NSObject {
 
 extension CHAnimationManager {
     private func setDisplayLine() {
+
         displayLink = CADisplayLink(target: self, selector: #selector(update))
+        displayLink?.isPaused = true
+        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
+    }
+
+    private func setDisplayLineCounter() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateValue))
+        displayLink?.frameInterval = 2
         displayLink?.isPaused = true
         displayLink?.add(to: RunLoop.main, forMode: .commonModes)
     }
@@ -126,6 +157,28 @@ extension CHAnimationManager {
         if now >= endTime {
             displayLink?.isPaused = true
             displayLink?.invalidate()
+            isAnimating = false
+            if let completion = completion {
+                completion()
+            }
+        }
+    }
+
+    @objc private func updateValue() {
+        guard let label = label else { return }
+        let now = Date.timeIntervalSinceReferenceDate
+        label.progress = label.progress + (now - label.lastUpdate)
+        label.lastUpdate = now
+
+        if label.progress >= label.totalTime {
+            displayLink?.invalidate()
+            displayLink = nil
+            label.progress = label.totalTime
+        }
+
+        label.setText(value: label.currentValue())
+
+        if label.progress == label.totalTime {
             isAnimating = false
             if let completion = completion {
                 completion()

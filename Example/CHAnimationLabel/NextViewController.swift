@@ -11,7 +11,6 @@ import CHAnimationLabel
 
 class NextViewController: UIViewController {
 
-
     private var label:CHAnimationLabel!
 
     override func viewDidLoad() {
