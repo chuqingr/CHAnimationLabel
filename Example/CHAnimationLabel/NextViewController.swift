@@ -26,7 +26,7 @@ class NextViewController: UIViewController {
     private func initUI() {
         view.backgroundColor = UIColor.white
         label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 333, height: 133))
-        label.text = "这是一个有动画的label，让我们来看一看~"
+        label.text = "This is a label with animation effects"
         label.font = UIFont.systemFont(ofSize: 15)
 //        label.animationType = .typewriter
         label.textColor = .black
@@ -47,7 +47,7 @@ class NextViewController: UIViewController {
         label.animationType = .easeIn
         label.format = "%.2f"
         label.startCounterAnimation(frome: 0, to: 10000, with: 2) {
-            debugPrint("完成了")
+            debugPrint("do something")
         }
     }
 

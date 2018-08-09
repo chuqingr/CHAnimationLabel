@@ -23,7 +23,7 @@ pod 'CHAnimationLabel'
 ## use
 #### animationType < .easeInOut
 ```swift
-let label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 199, height: 133))
+let label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 333, height: 133))
 label.animationType = .typewriter
 ///label.animationType = .shine
 ///label.animationType = .count
@@ -34,7 +34,7 @@ label.startAnimation(duration: 2, nil)
 ```
 #### animationType >= .easeInOut
 ```swift
-let label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 199, height: 133))
+let label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 333, height: 133))
 label.animationType = .easeInOut
 ///label.animationType = .easeIn
 ///...
@@ -42,7 +42,7 @@ label.text = "This is a label with animation effects"
 label.textColor = .black
 view.addSubview(label)
 label.startCounterAnimation(frome: 0, to: 10000, with: 2) {
-	debugPrint("完成了")
+	debugPrint("do something")
 }
 ```
 

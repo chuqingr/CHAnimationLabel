@@ -29,6 +29,13 @@ class CHAnimationManager: NSObject {
     private var completion: (() -> Void)?
     private var isAnimating: Bool = false
 
+    private var counter:UILabelCounter!
+    var startingValue:CGFloat!
+    var destinationValue:CGFloat!
+    var progress:TimeInterval!
+    var lastUpdate:TimeInterval!
+    var totalTime:TimeInterval!
+
     func startAnimation(_ completion:(() -> Void)?) {
         guard let label = label else {
             return
@@ -46,13 +53,34 @@ class CHAnimationManager: NSObject {
         isAnimating = true
     }
 
-    deinit {
-        debugPrint("\(type(of: self)):deinit")
-    }
-
     func startCounterAnimation(_ completion:(() -> Void)?) {
         guard let label = label else {
             return
+        }
+        
+        progress = 0
+        totalTime = duration
+        if totalTime == 0 {
+            setText(value: destinationValue)
+            return
+        }
+        lastUpdate = Date.timeIntervalSinceReferenceDate
+
+        switch animationType {
+        case .linear:
+            counter = UILabelCounterLinear()
+        case .easeIn:
+            counter = UILabelCounterEaseIn()
+        case .easeOut:
+            counter = UILabelCounterEaseOut()
+        case .easeInOut:
+            counter = UILabelCounterEaseInOut()
+        case .easeOutBounce:
+            counter = UILabelCounterEaseOutBounce()
+        case .easeInBounce:
+            counter = UILabelCounterEaseInBounce()
+        default:
+            break
         }
 
         setDisplayLineCounter()
@@ -77,6 +105,21 @@ class CHAnimationManager: NSObject {
         animationType = .none
         super.init()
     }
+
+    deinit {
+        debugPrint("\(type(of: self)):deinit")
+    }
+}
+
+extension CHAnimationManager {
+    private func setDisplayLineCounter() {
+        displayLink?.invalidate()
+        displayLink = nil
+        displayLink = CADisplayLink(target: self, selector: #selector(updateValue))
+        displayLink?.frameInterval = 2
+        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
+    }
+
 }
 
 extension CHAnimationManager {
@@ -84,14 +127,6 @@ extension CHAnimationManager {
         displayLink?.invalidate()
         displayLink = nil
         displayLink = CADisplayLink(target: self, selector: #selector(update))
-        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
-    }
-
-    private func setDisplayLineCounter() {
-        displayLink?.invalidate()
-        displayLink = nil
-        displayLink = CADisplayLink(target: self, selector: #selector(updateValue))
-        displayLink?.frameInterval = 2
         displayLink?.add(to: RunLoop.main, forMode: .commonModes)
     }
 
@@ -141,7 +176,6 @@ extension CHAnimationManager {
 }
 
 extension CHAnimationManager {
-
     @objc private func update() {
         guard let endTime = endTime else {
             return
@@ -156,29 +190,6 @@ extension CHAnimationManager {
             displayLink?.isPaused = true
             displayLink?.invalidate()
             displayLink = nil
-            isAnimating = false
-            if let completion = completion {
-                completion()
-            }
-        }
-    }
-
-    @objc private func updateValue() {
-        guard let label = label else { return }
-        let now = Date.timeIntervalSinceReferenceDate
-        label.progress = label.progress + (now - label.lastUpdate)
-        label.lastUpdate = now
-
-        if label.progress >= label.totalTime {
-            displayLink?.isPaused = true
-            displayLink?.invalidate()
-            displayLink = nil
-            label.progress = label.totalTime
-        }
-
-        label.setText(value: label.currentValue())
-
-        if label.progress == label.totalTime {
             isAnimating = false
             if let completion = completion {
                 completion()
@@ -267,5 +278,49 @@ extension CHAnimationManager {
             break
         }
         return attributedString
+    }
+}
+
+extension CHAnimationManager {
+    @objc private func updateValue() {
+        let now = Date.timeIntervalSinceReferenceDate
+        progress = progress + (now - lastUpdate)
+        lastUpdate = now
+
+        if progress >= totalTime {
+            displayLink?.isPaused = true
+            displayLink?.invalidate()
+            displayLink = nil
+            progress = totalTime
+        }
+
+        setText(value: currentValue())
+
+        if progress == totalTime {
+            isAnimating = false
+            if let completion = completion {
+                completion()
+            }
+        }
+    }
+
+    private func setText(value:CGFloat) {
+        guard let format = label?.format else { return }
+        guard let label = label else { return }
+        /// 正则匹配
+        if NSPredicate(format: "SELF MATCHES %@", "%(.*)i").evaluate(with: format) || NSPredicate(format: "SELF MATCHES %@", "%(.*)d").evaluate(with: format) {
+            label.text = String(format: format, Int(value))
+        }else {
+            label.text = String(format: format, value)
+        }
+    }
+
+    private func currentValue() -> CGFloat {
+        if progress >= totalTime {
+            return destinationValue
+        }
+        let percent = progress / totalTime
+        let updateValue = counter.update(t: CGFloat(percent))
+        return startingValue + (updateValue * (destinationValue - startingValue))
     }
 }

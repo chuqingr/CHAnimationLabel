@@ -119,14 +119,8 @@ open class CHAnimationLabel: UILabel {
         }
     }
 
-    var progress:TimeInterval!
-    var lastUpdate:TimeInterval!
-    var totalTime:TimeInterval!
     /// 私有属性
     private(set) var duration: TimeInterval = 4.0
-    private var startingValue:CGFloat!
-    private var destinationValue:CGFloat!
-    private var counter:UILabelCounter!
     private var animator: CHAnimationManager?
 
     open func startAnimation(duration: TimeInterval,
@@ -150,41 +144,15 @@ open class CHAnimationLabel: UILabel {
                     _ completion:(() -> Void)?) {
         guard let animator = animator else { return }
 
-        startingValue = startValue
-        destinationValue = endValue
-
-        if duration == 0 {
-            setText(value: endValue)
-            return
-        }
-
         if format == nil {
             self.format = "%.1f"
         }
 
-        progress = 0
-        totalTime = duration
-        lastUpdate = Date.timeIntervalSinceReferenceDate
-
-        switch animationType {
-        case .linear:
-            counter = UILabelCounterLinear()
-        case .easeIn:
-            counter = UILabelCounterEaseIn()
-        case .easeOut:
-            counter = UILabelCounterEaseOut()
-        case .easeInOut:
-            counter = UILabelCounterEaseInOut()
-        case .easeOutBounce:
-            counter = UILabelCounterEaseOutBounce()
-        case .easeInBounce:
-            counter = UILabelCounterEaseInBounce()
-        default:
-            break
-        }
-
         self.duration = duration
+        animator.duration = duration
         animator.label = self
+        animator.startingValue = startValue
+        animator.destinationValue = endValue
         animator.startCounterAnimation(completion)
     }
 
@@ -199,25 +167,6 @@ open class CHAnimationLabel: UILabel {
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-
-    func setText(value:CGFloat) {
-        /// 正则匹配
-        if NSPredicate(format: "SELF MATCHES %@", "%(.*)i").evaluate(with: self.format) || NSPredicate(format: "SELF MATCHES %@", "%(.*)d").evaluate(with: self.format) {
-            text = String(format: self.format!, Int(value))
-        }else {
-            text = String(format: self.format!, value)
-        }
-    }
-
-    func currentValue() -> CGFloat {
-        if progress >= totalTime {
-            return destinationValue
-        }
-        let percent = progress / totalTime
-        let updateVal = counter.update(t: CGFloat(percent))
-        debugPrint("\(updateVal)")
-        return startingValue + (updateVal * (destinationValue - startingValue))
     }
 
 }
