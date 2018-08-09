@@ -105,8 +105,10 @@ open class CHAnimationLabel: UILabel {
     /// 公开属性
     open var animationType = CHAnimationType.none {
         didSet {
-            animator = CHAnimationManager(animationType: animationType, duration: duration)
-            animator?.label = self
+            if animator == nil {
+                animator = CHAnimationManager(animationType: animationType, duration: duration)
+                animator?.label = self
+            }
         }
     }
     open var format:String?
@@ -141,7 +143,7 @@ open class CHAnimationLabel: UILabel {
         animator.label = self
         animator.startAnimation(completion)
     }
-//countFrom:(CGFloat)startValue to:(CGFloat)endValue withDuration:(NSTimeInterval)duration
+
     open func startCounterAnimation(frome startValue:CGFloat,
                     to endValue:CGFloat,
                     with duration:TimeInterval,

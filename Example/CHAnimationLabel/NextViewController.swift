@@ -25,20 +25,13 @@ class NextViewController: UIViewController {
 
     private func initUI() {
         view.backgroundColor = UIColor.white
-        label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 199, height: 133))
-        //        label.text = "这是一个有动画的label，让我们来看一看~"
+        label = CHAnimationLabel(frame: CGRect(x: 33, y: 66, width: 333, height: 133))
+        label.text = "这是一个有动画的label，让我们来看一看~"
         label.font = UIFont.systemFont(ofSize: 15)
-        label.animationType = .easeInOut
-        label.format = "%.2f"
-        label.startCounterAnimation(frome: 0, to: 10000, with: 2) {
-            debugPrint("完成了")
-        }
-        //        label.animationType = .typewriter
-        //        label.animationType = .shine
-        //        label.animationType = .count
+//        label.animationType = .typewriter
         label.textColor = .black
         view.addSubview(label)
-        //        label.startAnimation(duration: 2, nil)
+//        label.startAnimation(duration: 2, nil)
 
         let btn = UIButton(frame: CGRect(x: 100 , y: 300, width: 100, height: 100))
         view.addSubview(btn)
@@ -51,6 +44,8 @@ class NextViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        label.animationType = .easeIn
+        label.format = "%.2f"
         label.startCounterAnimation(frome: 0, to: 10000, with: 2) {
             debugPrint("完成了")
         }

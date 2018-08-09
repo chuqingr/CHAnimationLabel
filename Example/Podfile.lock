@@ -1,5 +1,5 @@
 PODS:
-  - CHAnimationLabel (1.0.0)
+  - CHAnimationLabel (1.2.2)
 
 DEPENDENCIES:
   - CHAnimationLabel
@@ -9,7 +9,7 @@ SPEC REPOS:
     - CHAnimationLabel
 
 SPEC CHECKSUMS:
-  CHAnimationLabel: 8f1240fb94c6efdda76a33ccc81c322880bdab84
+  CHAnimationLabel: 62e0d35819dfc02b475a8797391e79dc895d3a5d
 
 PODFILE CHECKSUM: 5504dfb6ea0ad3ae4676812ae301b045dcc62f43
 
