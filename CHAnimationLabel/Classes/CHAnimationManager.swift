@@ -19,7 +19,6 @@ class CHAnimationManager: NSObject {
     }
     /// 私有属性
     private(set) var animationType: CHAnimationType
-    private var shapeLayer:CAShapeLayer?
     private var displayLink: CADisplayLink?
     private var beginTime: CFTimeInterval?
     private var endTime: CFTimeInterval?
@@ -30,11 +29,11 @@ class CHAnimationManager: NSObject {
     private var isAnimating: Bool = false
 
     private var counter:UILabelCounter!
+    private var progress:TimeInterval!
+    private var lastUpdate:TimeInterval!
+    private var totalTime:TimeInterval!
     var startingValue:CGFloat!
     var destinationValue:CGFloat!
-    var progress:TimeInterval!
-    var lastUpdate:TimeInterval!
-    var totalTime:TimeInterval!
 
     func startAnimation(_ completion:(() -> Void)?) {
         guard let label = label else {
